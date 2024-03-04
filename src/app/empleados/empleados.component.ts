@@ -40,4 +40,7 @@ export class EmpleadosComponent implements OnInit {
   eliminarElemento(id: number) {
     console.log('Eliminar elemento con ID:', id);
   }
+  agregarElemento(id: number) {
+    console.log('Agregar elemento');
+  }
 }
