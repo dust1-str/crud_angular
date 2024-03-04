@@ -1,0 +1,55 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2.5px;
+}
+
+tr:hover {
+    background-color: rgb(240,236,236);
+}
+
+th {
+    padding: 8px;
+}
+
+th {
+    background: linear-gradient(to right, #0467d1, #4d94ff);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+td button {
+    width: 100%;
+    padding: 5px 0px;
+    margin-bottom: auto;
+    text-align: center;
+    border: none;
+}
+
+.edit {
+    background-color: #fff200;
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.delete {
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 10px;
+}
