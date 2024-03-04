@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './empleados.component.html',
   styleUrls: ['./empleados.component.css']
 })
+
 export class EmpleadosComponent implements OnInit {
   elementos: Objeto[] = [];
   columnas: string[] = ['id', 'nombre', 'cargo', 'salario']; 
