@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Object } from '../Core/Interfaces/object';
 import { InfoService } from '../Core/Services/info.service';
 import { Router } from '@angular/router';
+import { authGuard } from '../auth.guard';
 
 
 @Component({
@@ -21,7 +22,13 @@ columnas:string[]=['id','nombre','apodo','fundacion'];
 constructor(private equipoService: InfoService , private router: Router) { }
 
   ngOnInit(): void {
-    this.obtenerDatos();
+    if(!authGuard){
+      this.router.navigate(['/login']);
+    }
+    else{
+      this.obtenerDatos();
+
+    }
 
   }
 

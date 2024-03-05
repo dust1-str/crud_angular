@@ -18,4 +18,6 @@ export class LoginService {
   isAuth() {
     return localStorage.getItem('token')?true:false;
   }
+
+
 }
