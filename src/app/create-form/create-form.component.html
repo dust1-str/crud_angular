@@ -1,0 +1,27 @@
+<form [formGroup]="createForm" (ngSubmit)="crear()" class="form">
+  <div class="form-group">
+    <label>Nombre:</label>
+    <input type="text" formControlName="nombre" class="form-control">
+    <div *ngIf="createForm.controls['nombre'].invalid && (createForm.controls['nombre'].dirty || createForm.controls['nombre'].touched)" class="error">
+      Nombre es requerido y debe tener al menos 5 caracteres.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Apodo:</label>
+    <input type="text" formControlName="apodo" class="form-control">
+    <div *ngIf="createForm.controls['apodo'].invalid && (createForm.controls['apodo'].dirty || createForm.controls['apodo'].touched)" class="error">
+      Apodo es requerido y debe tener al menos 4 caracteres.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Fundación:</label>
+    <input type="text" formControlName="fundacion" class="form-control">
+    <div *ngIf="createForm.controls['fundacion'].invalid && (createForm.controls['fundacion'].dirty || createForm.controls['fundacion'].touched)" class="error">
+      Fundación es requerida y debe tener al menos 8 caracteres.
+    </div>
+  </div>
+
+  <button type="submit" class="submit-button" [disabled]="createForm.invalid">Enviar</button>
+</form>

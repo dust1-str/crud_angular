@@ -36,7 +36,7 @@ export class LoginComponent {
           localStorage.setItem('token', data.access_token);
           console.log(data.access_token)
           console.log(localStorage.getItem('token'));
-          this.router.navigate(['/home']);
+          this.router.navigate(['/equipos']);
         },
         error: error => {
           console.log(error.error.message);
