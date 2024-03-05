@@ -22,25 +22,23 @@ export class InfoService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerEquipo(): Observable<Object[]> {
+  obtenerEquipos(): Observable<Object[]> {
     return this.http.get<Object[]>(this.apiUrl);
   }
 
   eliminarequipo(id: number): Observable<Delete> {
     const deleteUrl = `${this.apiUrlDelete}${id}`;
-    console.log(deleteUrl);
     return this.http.delete<Delete>(deleteUrl);
   }
 
   crearequipo(nombre: string, apodo : string, fundacion:string): Observable<Post> {
     const storeUrl = `${this.apiUrlStore}`;
-    console.log(storeUrl);
     return this.http.post<Post>(storeUrl, {nombre, apodo, fundacion});
   }
 
-  actualizarequipo(id: number, equipo: Object): Observable<Update> {
+  actualizarequipo(id: number, nombre: string, apodo : string, fundacion:string): Observable<Update> {
     const updateUrl = `${this.apiUrlUpdate}${id}`;
     console.log(updateUrl);
-    return this.http.post<Update>(updateUrl, equipo);
+    return this.http.post<Update>(updateUrl, {nombre, apodo, fundacion});
   }
 }

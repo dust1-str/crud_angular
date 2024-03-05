@@ -26,10 +26,9 @@ constructor(private equipoService: InfoService , private router: Router) { }
   }
 
   obtenerDatos() {
-    this.equipoService.obtenerEquipo().subscribe(
+    this.equipoService.obtenerEquipos().subscribe(
       data => {
         this.elementos = data;
-        console.log(this.elementos)
       },
       error => {
         console.error('Error al obtener equipos', error);
@@ -38,17 +37,14 @@ constructor(private equipoService: InfoService , private router: Router) { }
   }
 
   editarElemento(id: number) {
-    console.log('Editar elemento con ID:', id);
     this.router.navigate(['/updateform', id]);
   }
 
 
   eliminarElemento(id: number) {
     if (confirm('¿Estás seguro de que quieres eliminar este elemento?')) {
-      console.log('Eliminar elemento con ID:', id);
       this.equipoService.eliminarequipo(id).subscribe(
         data => {
-          console.log('Equipo eliminado');
           location.reload();
         },      
         error => {
@@ -60,7 +56,6 @@ constructor(private equipoService: InfoService , private router: Router) { }
 
 
   agregarElemento(event: any) {
-    console.log('Agregar elemento');
     this.router.navigate(['/createform']);
   }
 }

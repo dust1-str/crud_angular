@@ -13,6 +13,6 @@ export const routes: Routes = [
     { path: 'empleados', component: EmpleadosComponent, canActivate: [authGuard] },
     {path: 'equipos',component:EquiposComponent,canActivate:[authGuard]},
     { path: 'createform', component: CreateFormComponent, canActivate: [authGuard]},
-    { path: 'updateform', component: UpdateFormComponent, canActivate: [authGuard]}
+    { path: 'updateform/:id', component: UpdateFormComponent, canActivate: [authGuard]}
 
 ];
