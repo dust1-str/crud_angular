@@ -15,8 +15,9 @@ export class LoginService {
     return this.http.post<Login>(url, { email, password });
   }
 
-  isAuth() {
-    return localStorage.getItem('token')?true:false;
+  isAuth(): Observable<any> {
+    let url = 'http://127.0.0.1:8000/api/verificar';
+    return this.http.get<any>(url);
   }
 
 
