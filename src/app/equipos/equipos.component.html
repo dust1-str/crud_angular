@@ -1,8 +1,5 @@
+<app-animacion></app-animacion>
 <div>
-    <h1>Mi Lista De Equipos</h1>
-  </div>
-  
-  <div>
     <app-table [elementos]="elementos" [columnas]="columnas" (eliminar)="eliminarElemento($event)"
       (editar)="editarElemento($event)" (agregar)="agregarElemento($event)"></app-table>
   </div>

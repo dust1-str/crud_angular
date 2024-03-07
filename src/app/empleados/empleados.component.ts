@@ -3,11 +3,12 @@ import { EmpleadoService } from '../Core/Services/empleado.service';
 import { Objeto } from '../Core/Interfaces/objeto';
 import { TableComponent } from '../table/table.component';
 import { CommonModule } from '@angular/common';
+import { AnimacionComponent } from '../animacion/animacion.component';
 
 @Component({
   selector: 'app-empleados',
   standalone: true,
-  imports: [TableComponent,CommonModule],
+  imports: [TableComponent,CommonModule,AnimacionComponent],
   templateUrl: './empleados.component.html',
   styleUrls: ['./empleados.component.css']
 })

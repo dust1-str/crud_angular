@@ -5,12 +5,13 @@ import { Object } from '../Core/Interfaces/object';
 import { InfoService } from '../Core/Services/info.service';
 import { Router } from '@angular/router';
 import { authGuard } from '../auth.guard';
+import { AnimacionComponent } from '../animacion/animacion.component';
 
 
 @Component({
   selector: 'app-equipos',
   standalone: true,
-  imports: [TableComponent,CommonModule],
+  imports: [TableComponent,CommonModule, AnimacionComponent],
   templateUrl: './equipos.component.html',
   styleUrl: './equipos.component.css'
 })
