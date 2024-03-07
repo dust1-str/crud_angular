@@ -56,6 +56,9 @@ constructor(private equipoService: InfoService , private router: Router) { }
           location.reload();
         },      
         error => {
+          if (error.status === 'invalid token' || error.status === 'token not found') {
+            this.router.navigate(['/login']);
+          }
           console.error('Error al eliminar equipo', error);
         }
       );

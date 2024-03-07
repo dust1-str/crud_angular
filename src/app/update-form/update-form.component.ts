@@ -45,7 +45,10 @@ export class UpdateFormComponent implements OnInit{
           this.router.navigate(['/equipos']);
         },
         error: error => {
-          console.log(error.error.message);
+          if (error.status === 'invalid token' || error.status === 'token not found') {
+            this.router.navigate(['/login']);
+          }
+          console.log(error);
         }
       });
     }
